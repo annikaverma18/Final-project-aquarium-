@@ -1,0 +1,53 @@
+import turtle as painter
+
+def make_a_leaf(): 
+  painter.pencolor('SpringGreen4')
+  painter.pensize(10)
+  painter.pendown()
+  painter.left(30)
+  painter.forward(10)
+  painter.right(20)
+  painter.forward(10)
+  painter.left(20)
+  painter.forward(10)
+  painter.left(40)
+  painter.forward(10)
+  painter.right(40)
+  painter.forward(10)
+  painter.left(160)
+  painter.forward(10)
+  painter.left(50)
+  painter.forward(20)
+  painter.right(40)
+  painter.forward(20)
+
+def make_plant(): 
+  painter.penup()
+  make_a_leaf()
+  painter.right(90)
+  make_a_leaf()
+  painter.left(20)
+  make_a_leaf()
+  painter.right(90)
+  make_a_leaf()
+  painter.left(120)
+  make_a_leaf()
+
+def make_random_plants(): 
+  painter.penup()
+  painter.goto(-150,-140)
+  make_plant()
+  painter.penup()
+  painter.right(200)
+  painter.goto(120,-190)
+  make_plant()
+
+make_random_plants()
+
+painter.penup()
+painter.goto(0,0)
+
+
+wn = painter.Screen()
+wn.setup(600,450)
+wn.mainloop()
