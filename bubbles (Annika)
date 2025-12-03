@@ -1,0 +1,30 @@
+import turtle as painter 
+
+t = painter.Turtle(shape='circle')
+s = painter.Turtle(shape='circle')
+g = painter.Turtle(shape='circle')
+t.penup()
+s.penup()
+g.penup()
+t.color('lightblue')
+s.color('lightblue')
+g.color('lightblue')
+t.speed(1)
+s.speed(1)
+g.speed(1)
+
+for bubbles in range (10): 
+  for bubble1 in range(10): 
+    t.goto(-150,-150)
+    g.goto(150,-150)
+    s.goto(0,-150)
+    t.goto(-150,300)
+    s.goto(0,300)
+    g.goto(150,300)
+  
+  
+  
+
+wn = painter.Screen()
+wn.setup(600,450)
+wn.mainloop()
