@@ -1,0 +1,107 @@
+import turtle as painter
+
+#make flowers 
+def make_flower_petal(): 
+ painter.pencolor('IndianRed2')
+ painter.fillcolor('IndianRed2')
+ painter.begin_fill()
+ painter.circle(15,360,8)
+ painter.end_fill()
+ 
+def make_flower_petal_two(): 
+  painter.pencolor('LightPink1')
+  painter.fillcolor('LightPink1')
+  painter.begin_fill()
+  painter.circle(15,360,8)
+  painter.end_fill()
+
+def make_first_flower(): 
+  painter.penup()
+  painter.goto(200,-150)
+  painter.pencolor('DarkOliveGreen3')
+  painter.pendown()
+  painter.pensize(10)
+  painter.right(-90)
+  painter.forward(30)
+  painter.pencolor('IndianRed2')
+  painter.right(90)
+  make_flower_petal()
+  painter.goto(200,-70)
+  painter.right(90)
+  make_flower_petal()
+  painter.goto(150,-70)
+  make_flower_petal()
+  painter.goto(170,-50)
+  make_flower_petal()
+  painter.goto(160,-90)
+  make_flower_petal()
+def make_second_flower(): 
+  painter.penup()
+  painter.goto(130,-170)
+  painter.pencolor('DarkOliveGreen3')
+  painter.pendown()
+  painter.right(180)
+  painter.pensize(10)
+  painter.forward(50)
+  make_flower_petal_two()
+  painter.forward(30)
+  make_flower_petal_two()
+  painter.right(90)
+  painter.forward(10)
+  make_flower_petal_two()
+  painter.right(90)
+  painter.forward(20)
+  make_flower_petal_two()
+  
+def make_middle_of_flowers():
+  painter.goto(125,-100)
+  painter.pencolor('darkgoldenrod1')
+  painter.circle(7,360)
+  painter.penup()
+  painter.goto(180,-75)
+  painter.pendown()
+  painter.circle(7,360)
+
+def make_a_log(): 
+  painter.penup()
+  painter.goto(130,-170)
+  painter.pencolor('sienna4')
+  painter.pendown()
+  painter.left(110)
+  painter.forward(120)
+  painter.right(90)
+  painter.forward(10)
+  painter.pencolor('sienna3')
+  painter.right(90)
+  painter.forward(120)
+  painter.left(90)
+  painter.forward(5)
+  painter.pencolor('sienna4')
+  painter.left(90)
+  painter.forward(120)
+  painter.right(90)
+  painter.forward(5)
+  painter.right(90)
+  painter.pencolor('sienna3')
+  painter.forward(120)
+  painter.left(90)
+  painter.forward(5)
+  painter.left(90)
+  painter.pencolor('sienna4')
+  painter.forward(120)
+
+
+make_first_flower()
+make_second_flower()
+make_middle_of_flowers()
+
+
+make_a_log()
+
+painter.penup()
+painter.goto(0,0)
+
+
+wn = painter.Screen()
+wn.setup(600,450)
+wn.mainloop()
