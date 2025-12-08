@@ -1,0 +1,70 @@
+import turtle as painter
+wn = painter.Screen()
+wn.setup(600,450)
+
+t = painter.Turtle(shape='circle')
+g = painter.Turtle(shape='circle')
+s = painter.Turtle(shape='circle')
+
+painter_list = [t,s,g]
+
+for bubbles in painter_list:
+  bubbles.penup()
+  bubbles.color('white')
+  bubbles.speed(1)
+
+txpos = -150
+typos = -150
+gxpos = 150 
+gypos = -150
+sxpos = 0 
+sypos = -150
+
+t.goto(txpos,typos)
+g.goto(gxpos,gypos)
+s.goto(sxpos,sypos)
+
+t.color('lightblue')
+g.color('lightblue')
+s.color('lightblue')
+
+t.right(-90)
+g.right(-90)
+s.right(-90)
+
+for bubbles in range(100):
+  for i in range(30):
+    txpos += 10
+    typos += 10
+    gxpos += 10 
+    gypos += 10
+    sxpos += 10
+    sypos += 10
+    t.goto(txpos,typos)
+    g.goto(gxpos,gypos)
+    s.goto(sxpos,sypos)
+    txpos -= 10
+    typos += 10
+    gxpos -= 10 
+    gypos += 10
+    sxpos -= 10
+    sypos += 10
+    t.goto(txpos,typos)
+    g.goto(gxpos,gypos)
+    s.goto(sxpos,sypos)
+  txpos = -150
+  typos = -150
+  gxpos = 150 
+  gypos = -150
+  sxpos = 0 
+  sypos = -150
+  if typos >= 300 : 
+    t.goto(txpos,typos)
+  if gypos >= 300 : 
+    g.goto(gxpos,gypos)
+  if sypos >= 300 : 
+    s.goto(sxpos,sypos)
+
+wn = painter.Screen()
+wn.setup(600,450)
+wn.mainloop()
